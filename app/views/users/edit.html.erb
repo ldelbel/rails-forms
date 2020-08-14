@@ -1,0 +1,7 @@
+
+<%= form_for :user, url: users_path do |u| %>
+  Enter Username: <%= u.text_field :username, value: 'Username' %><br>
+  Email: <%= u.email_field :email, placeholder: 'name@provider.com' %><br>
+  Password: <%= u.password_field :password, placeholder: 'strong password' %><br>
+  <%= u.submit value: 'Update' %>
+<% end %>
