@@ -1,5 +1,12 @@
-
-<%= form_for :user, url: users_path do |u| %>
+<h1>Edit User</h1>
+  <% if @user.errors.any? do %>
+    <% @user.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  <% end %>
+<% end %>
+<%= form_for @user do |u| %>
+  
   Enter Username: <%= u.text_field :username, value: 'Username' %><br>
   Email: <%= u.email_field :email, placeholder: 'name@provider.com' %><br>
   Password: <%= u.password_field :password, placeholder: 'strong password' %><br>
