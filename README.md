@@ -24,21 +24,19 @@
 <p align="center">
   <a href="#about">About</a> •
   <a href="#with">Built With</a> •
-  <a href="#database">Database Model</a> •
   <a href="#setup">Setup</a> •
-  <a href="#howto">Setup</a> •
+  <a href="#howto">How to Start</a> •
   <a href="#authors">Authors</a> •
 </p>
 
 ## About <a name = "about"></a>
 
+  This project has the goal of practicing rails forms, improving the authors' comprehension about the following helpers: form_tag, form_for
+
 ## 🔧 Built with <a name = "with"></a>
 
 - Ruby 2.7.1
 - Rails 5.2.4.3
-
-## Database Model <a name = "database"></a>
-
 
 ## 🛠 Setup <a name = "setup"></a>
 
@@ -50,7 +48,12 @@ $ bundle install
 $ rails db:migrate
 ```
 
-## 📝 How to use <a name = "howto"></a>
+## 📝 How to start <a name = "howto"></a>
+
+```
+$ rails server
+$ cd localhost:3000/users
+```
 
 ## ✒️ Authors <a name = "authors"></a>
 
