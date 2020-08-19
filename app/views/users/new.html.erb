@@ -1,0 +1,34 @@
+<h1>New User</h1>
+
+<% if false %>
+  <form action=users_path method="POST" accept-charset="UTF-8">
+    <label for="user[username]">Username:</label><br>
+    <input type="text" id="username" name="user[username]"><br>
+    <label for="user[email]">Email:</label><br>
+    <input type="email" id="email" name="user[email]"><br>
+    <label for="user[password]">Password:</label><br>
+    <input type="password" id="password" name="user[password]"><br>
+    <br><input type="submit" value="Submit">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>"> 
+  </form> 
+<% end %>
+
+<% if false %>
+  <%= form_tag(users_path) do %><br>
+    <%= label_tag 'username', 'Username:' %><br>
+    <%= text_field_tag 'username' %><br>
+    <%= label_tag 'email', 'Email:' %><br>
+    <%= email_field_tag 'email' %><br>
+    <%= label_tag 'password', 'Password:' %><br>
+    <%= password_field_tag 'password' %><br>
+    <br><%= submit_tag 'Submit' %>
+  <% end %>
+<% end %>
+
+
+<%= form_for @user do |u| %>
+  Enter Username: <br> <%= u.text_field :username, value: 'Username' %><br>
+  Email: <br><%= u.email_field :email, placeholder: 'name@provider.com' %><br>
+  Password: <br><%= u.password_field :password, placeholder: 'strong password' %><br>
+  <%= u.submit value: 'Submit' %>
+<% end %>
